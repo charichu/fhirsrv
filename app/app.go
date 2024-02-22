@@ -13,6 +13,7 @@ type App struct {
 }
 
 func (a *App) Initialize(user, password, dbname string) {
+	a.Router = http.NewServeMux()
 	a.InitializeRoutes()
 }
 
