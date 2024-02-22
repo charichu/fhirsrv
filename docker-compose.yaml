@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  fhir-srv:
+    container_name: fhir-srv
+    build: .
+    ports:
+      - "8080:8080"

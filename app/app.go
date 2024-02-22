@@ -18,7 +18,8 @@ func (a *App) Initialize(user, password, dbname string) {
 }
 
 func (a *App) Run(addr string) {
-	log.Fatal(http.ListenAndServe(":8090", a.Router))
+	fmt.Println("FHIR has been lit on the server")
+	log.Fatal(http.ListenAndServe(addr, a.Router))
 }
 
 func (a *App) InitializeRoutes() {
